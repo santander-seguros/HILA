@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HILA | Experiencias de aventura y naturaleza en México</title>
+  <meta name="description" content="Kayak al amanecer en Xochimilco, vía ferrata con rappel y camping en Las Estacas. Salidas en grupo desde la CDMX con guías certificados y equipo.">
+  <!-- SITE_URL: reemplaza https://www.tu-dominio.com por tu dominio real en TODOS los archivos (ver LEEME.md) -->
+  <link rel="canonical" href="https://www.tu-dominio.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#153F2C">
+
+  <!-- Íconos (marcadores: agrega los archivos en img/ con estos nombres) -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Redes sociales (imagen marcador: img/og-hila-1200x630.jpg) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HILA Experiencias">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="HILA | Experiencias de aventura y naturaleza en México">
+  <meta property="og:description" content="Kayak al amanecer en Xochimilco, vía ferrata con rappel y camping en Las Estacas. Salidas en grupo desde la CDMX con guías certificados y equipo.">
+  <meta property="og:url" content="https://www.tu-dominio.com/">
+  <meta property="og:image" content="https://www.tu-dominio.com/img/og-hila-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Grupo de HILA disfrutando una salida en la naturaleza">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HILA | Experiencias de aventura y naturaleza en México">
+  <meta name="twitter:description" content="Kayak al amanecer en Xochimilco, vía ferrata con rappel y camping en Las Estacas. Salidas en grupo desde la CDMX con guías certificados y equipo.">
+  <meta name="twitter:image" content="https://www.tu-dominio.com/img/og-hila-1200x630.jpg">
+
+  <!-- Tipografías: serif editorial (Newsreader), sans legible (Figtree), manuscrita solo para "Sal a vivirlo." (Caveat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
+  <!-- Íconos Phosphor (un solo estilo de trazo en todo el sitio) -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Con JavaScript activo se preparan las animaciones de entrada; sin JS todo se ve normal -->
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Movimiento compartido (modo ligero, telón, entradas): va en el <head> para decidir antes de pintar -->
+  <script src="animaciones.js" data-telon></script>
+  <!-- Al recargar o volver con Atrás/Adelante, la página empieza arriba como una
+       visita nueva (sin recordar el scroll ni el #ancla). Las visitas nuevas con
+       #ancla y los enlaces del menú funcionan normal. Va en el <head> para correr
+       antes de que se pinte la página. -->
+  <script>
+  (function () {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    function arriba() {
+      if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); // sin animación de scroll suave
+    }
+    var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+    var tipo = nav ? nav.type : (performance.navigation ? ['navigate', 'reload', 'back_forward'][performance.navigation.type] : '');
+    if (tipo === 'reload' || tipo === 'back_forward') {
+      arriba();
+      document.addEventListener('DOMContentLoaded', arriba);
+    }
+    window.addEventListener('pageshow', function (e) { if (e.persisted) arriba(); });
+  })();
+  </script>
+
+  <!-- Datos estructurados: solo información verdadera y visible en la página.
+       Cuando existan fechas y precios reales (desde la base de datos) se
+       agregarán Event/Offer en cada página de experiencia. No se publican
+       reseñas ni calificaciones. El teléfono se agregará cuando sea el real. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.tu-dominio.com/#organizacion",
+        "name": "HILA Experiencias",
+        "url": "https://www.tu-dominio.com/",
+        "logo": "https://www.tu-dominio.com/img/logo-hila.png",
+        "image": "https://www.tu-dominio.com/img/logo-hila.png",
+        "slogan": "Sal a vivirlo.",
+        "email": "hola@hilaexperiencias.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "hola@hilaexperiencias.com",
+          "availableLanguage": "es"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.tu-dominio.com/#sitio",
+        "name": "HILA Experiencias",
+        "url": "https://www.tu-dominio.com/",
+        "inLanguage": "es-MX",
+        "publisher": { "@id": "https://www.tu-dominio.com/#organizacion" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Capas de la transición tarjeta ↔ modal (fuera del diálogo para que el cierre sea continuo) -->
+  <div class="flip-scrim" aria-hidden="true"></div>
+  <div class="flip-ghost" aria-hidden="true"></div>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Barra de progreso de lectura -->
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Cursor personalizado (solo computadora, lo activa script.js) -->
+  <div class="cursor is-hidden" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"><span class="cursor__label">Arrastra</span></span>
+  </div>
+
+  <div class="nav-sentinel" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       NAVEGACIÓN FIJA
+       ========================================================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <!-- Logo maestro: img/logo-hila.png (no redibujar ni reconstruir con tipografía) -->
+      <a class="logo" href="#inicio" aria-label="HILA, ir al inicio">
+        <span class="marca marca--nav"><picture><source type="image/webp" srcset="img/logo-hila.webp 396w" sizes="(min-width: 960px) 150px, 112px"><img src="img/logo-hila.png" srcset="img/logo-hila.png 396w" sizes="(min-width: 960px) 150px, 112px" width="396" height="265" alt="HILA, Sal a vivirlo." decoding="async"></picture></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#experiencias">Experiencias</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#comunidad">Comunidad</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn--primary btn--sm nav__cta" data-magnetico href="#reserva">Reservar</a>
+
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-movil">
+        <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="menu-movil" hidden>
+      <nav aria-label="Menú móvil">
+        <a href="#experiencias">Experiencias</a>
+        <ul class="mobile-menu__exp" role="list">
+          <li><a href="experiencias/kayak-en-xochimilco/index.html">Kayak en Xochimilco</a></li>
+          <li><a href="experiencias/via-ferrata-y-rappel/index.html">Vía ferrata y rappel</a></li>
+          <li><a href="experiencias/camping-en-las-estacas/index.html">Camping en Las Estacas</a></li>
+        </ul>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#comunidad">Comunidad</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn--primary btn--block" href="#reserva">Reservar</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- =========================================================
+         1. HERO (oscuro, ilustración por capas con parallax)
+         ========================================================= -->
+    <section class="hero tone-dark" id="inicio" aria-labelledby="hero-title">
+      <!-- FOTO: v6/media/hero.jpg (horizontal, 2400 x 1600). Si no existe, se ve la ilustración. Ajusta el alt a lo que muestre tu foto. -->
+      <div class="scene scene--hero" data-scene="hero" data-parallax="pointer scroll">
+        <img class="scene__photo" src="media/hero.jpg" alt="Persona contemplando el atardecer desde lo alto de un acantilado durante una salida de HILA" width="2400" height="1600" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <h1 class="hero__title" id="hero-title">
+          <span class="mask"><span>Más que destinos,</span></span>
+          <span class="mask"><em>experiencias</em></span>
+          <span class="mask"><span>que se quedan.</span></span>
+        </h1>
+        <p class="hero__lead">Naturaleza, movimiento y personas reales, en experiencias pensadas para sacarte de la rutina.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--script btn--magnetic" href="#experiencias">
+            <span class="btn__inner">Sal a vivirlo <i class="ph ph-arrow-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Franja de confianza con contadores (cifras de ejemplo: ajústalas a las reales) -->
+    <section class="trust-strip tone-dark" aria-labelledby="trust-title">
+      <h2 class="visually-hidden" id="trust-title">Por qué salir con HILA</h2>
+      <ul class="container trust-strip__list" role="list">
+        <li data-reveal>
+          <i class="ph ph-certificate" aria-hidden="true"></i>
+          <p><strong><span data-count="100">100</span>%</strong> guías certificados en primeros auxilios</p>
+        </li>
+        <li data-reveal>
+          <i class="ph ph-backpack" aria-hidden="true"></i>
+          <p><strong>Equipo</strong> incluido en todas las experiencias</p>
+        </li>
+        <li data-reveal>
+          <i class="ph ph-users-three" aria-hidden="true"></i>
+          <p><strong><span data-count="12">12</span> personas</strong> máximo por grupo</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Marquee de frases de la marca (decorativo) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Sal a vivirlo</span><i class="ph ph-mountains"></i>
+        <span>Sube, conecta, repite</span><i class="ph ph-mountains"></i>
+        <span>Lugares reales, personas increíbles</span><i class="ph ph-mountains"></i>
+        <span>Vas por la experiencia, te quedas por la gente</span><i class="ph ph-mountains"></i>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         2. ENCUENTRA TU PLAN IDEAL (claro, momento narrativo fijo)
+         En computadora la sección se fija un instante y cambia de
+         ambiente de color mientras bajas. En celular, cambia según
+         la tarjeta visible.
+         ========================================================= -->
+    <section class="plans" id="experiencias" aria-labelledby="plans-title" data-mood="kayak">
+      <div class="plans__triggers" aria-hidden="true">
+        <span data-trigger="kayak"></span><span data-trigger="ferrata"></span><span data-trigger="camping"></span>
+      </div>
+
+      <div class="plans__stage">
+        <div class="plans__ambient" aria-hidden="true">
+          <span data-amb="kayak"></span><span data-amb="ferrata"></span><span data-amb="camping"></span>
+        </div>
+        <div class="topo topo--plans" aria-hidden="true"></div>
+
+        <div class="container plans__layout">
+          <div class="plans__intro">
+            <h2 class="h2 reveal-title" id="plans-title">Encuentra tu plan ideal</h2>
+            <p class="section-lead" data-reveal>Tres formas de vivir HILA, según tu mood.</p>
+            <ol class="mood-list" role="list" data-reveal>
+              <li><button type="button" data-mood-go="kayak" aria-pressed="true"><span class="mood-list__bar" aria-hidden="true"></span>Tranquilidad</button></li>
+              <li><button type="button" data-mood-go="ferrata" aria-pressed="false"><span class="mood-list__bar" aria-hidden="true"></span>Adrenalina</button></li>
+              <li><button type="button" data-mood-go="camping" aria-pressed="false"><span class="mood-list__bar" aria-hidden="true"></span>Naturaleza</button></li>
+            </ol>
+            <span class="script plans__sign" data-write aria-hidden="true">Sal a vivirlo.</span>
+          </div>
+
+          <div class="plans__cards">
+            <!-- Tranquilidad -->
+            <article class="exp-card" data-mood="kayak" data-reveal>
+              <!-- FOTO: v6/media/kayak.jpg (vertical, 1200 x 1600). Ajusta el alt a lo que muestre tu foto. -->
+              <div class="scene" data-scene="kayak" data-parallax="hover">
+                <img class="scene__photo" src="media/kayak.jpg" alt="Grupo remando en kayak por un canal de Xochimilco al amanecer" width="1200" height="1600" loading="lazy" decoding="async">
+              </div>
+              <div class="exp-card__body">
+                <h3 class="exp-card__title">Tranquilidad</h3>
+                <p class="exp-card__tag">Agua que conecta</p>
+                <p class="exp-card__text">Para bajar el ritmo, conectar y disfrutar una experiencia ligera entre agua, aire libre y buena compañía.</p>
+                <p class="exp-card__next"><i class="ph ph-calendar-blank" aria-hidden="true"></i>Próxima salida: <span data-proxima="kayak">Sáb 17 oct</span></p>
+                <dl class="exp-card__preview">
+                  <div><dt>Duración</dt><dd>5 h</dd></div>
+                  <div><dt>Dificultad</dt><dd>Baja</dd></div>
+                  <div><dt>Desde</dt><dd>$850</dd></div>
+                </dl>
+                <a class="exp-card__cta" href="experiencias/kayak-en-xochimilco/index.html" data-open-exp="kayak">
+                  Kayak en Xochimilco <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Adrenalina -->
+            <article class="exp-card" data-mood="ferrata" data-reveal>
+              <!-- FOTO: v6/media/ferrata.jpg (vertical, 1200 x 1600). Ajusta el alt a lo que muestre tu foto. -->
+              <div class="scene" data-scene="ferrata" data-parallax="hover">
+                <img class="scene__photo" src="media/ferrata.jpg" alt="Persona con casco y arnés avanzando por una vía ferrata sobre la roca" width="1200" height="1600" loading="lazy" decoding="async">
+              </div>
+              <div class="exp-card__body">
+                <h3 class="exp-card__title">Adrenalina</h3>
+                <p class="exp-card__tag">Retos que te mueven</p>
+                <p class="exp-card__text">Para quienes buscan reto, movimiento y esa dosis de emoción que te cambia el día.</p>
+                <p class="exp-card__next"><i class="ph ph-calendar-blank" aria-hidden="true"></i>Próxima salida: <span data-proxima="ferrata">Dom 25 oct</span></p>
+                <dl class="exp-card__preview">
+                  <div><dt>Duración</dt><dd>8 h</dd></div>
+                  <div><dt>Dificultad</dt><dd>Media</dd></div>
+                  <div><dt>Desde</dt><dd>$1,450</dd></div>
+                </dl>
+                <a class="exp-card__cta" href="experiencias/via-ferrata-y-rappel/index.html" data-open-exp="ferrata">
+                  Vía ferrata + rappel <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Naturaleza -->
+            <article class="exp-card" data-mood="camping" data-reveal>
+              <!-- FOTO: v6/media/camping.jpg (vertical, 1200 x 1600). Ajusta el alt a lo que muestre tu foto. -->
+              <div class="scene" data-scene="camping" data-parallax="hover">
+                <img class="scene__photo" src="media/camping.jpg" alt="Casas de campaña junto al río de Las Estacas al atardecer" width="1200" height="1600" loading="lazy" decoding="async">
+              </div>
+              <div class="exp-card__body">
+                <h3 class="exp-card__title">Naturaleza</h3>
+                <p class="exp-card__tag">Lugares reales, personas increíbles</p>
+                <p class="exp-card__text">Para desconectarte de la ciudad, dormir bajo las estrellas y volver con la mente más ligera.</p>
+                <p class="exp-card__next"><i class="ph ph-calendar-blank" aria-hidden="true"></i>Próxima salida: <span data-proxima="camping">Sáb 7 nov</span></p>
+                <dl class="exp-card__preview">
+                  <div><dt>Duración</dt><dd>2 días</dd></div>
+                  <div><dt>Dificultad</dt><dd>Baja</dd></div>
+                  <div><dt>Desde</dt><dd>$1,890</dd></div>
+                </dl>
+                <a class="exp-card__cta" href="experiencias/camping-en-las-estacas/index.html" data-open-exp="camping">
+                  Camping en Las Estacas <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. UN VISTAZO A LO QUE TE ESPERA
+         Selector por experiencia, escenario tipo historias y tira de
+         contacto numerada. Los slides se editan en la lista VISTAZO, al
+         inicio de script.js. Archivos en v7/media/vistazo/<slug>/
+         ========================================================= -->
+    <section class="moments" id="comunidad" aria-labelledby="moments-title">
+      <div class="container moments__head">
+        <h2 class="h2 reveal-title" id="moments-title">Un vistazo a lo que te espera</h2>
+        <p class="section-lead" data-reveal>Momentos auténticos, paisajes que no se olvidan y la gente que hace especial cada salida.</p>
+      </div>
+
+      <div class="container vistazo" data-reveal>
+        <div class="vistazo__tabs" role="tablist" aria-label="Elegir experiencia">
+          <button class="vistazo__tab" type="button" role="tab" id="vtab-kayak" data-exp="kayak" data-mood="kayak" aria-selected="true" aria-controls="vistazo-panel" tabindex="0">Kayak en Xochimilco</button>
+          <button class="vistazo__tab" type="button" role="tab" id="vtab-ferrata" data-exp="ferrata" data-mood="ferrata" aria-selected="false" aria-controls="vistazo-panel" tabindex="-1">Vía ferrata + rappel</button>
+          <button class="vistazo__tab" type="button" role="tab" id="vtab-camping" data-exp="camping" data-mood="camping" aria-selected="false" aria-controls="vistazo-panel" tabindex="-1">Camping en Las Estacas</button>
+        </div>
+
+        <div class="vistazo__panel" id="vistazo-panel" role="tabpanel" aria-labelledby="vtab-kayak">
+          <div class="vistazo__layout">
+            <div class="stage" id="stage" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Fotos y videos de la experiencia. Flechas izquierda y derecha para cambiar, espacio para pausar.">
+              <div class="stage__bars" role="group" aria-label="Elegir foto"></div>
+              <ul class="stage__slides" role="list"></ul>
+              <p class="stage__pronto" hidden>Próximamente</p>
+              <button class="stage__toggle" type="button" id="stage-toggle" aria-pressed="false" aria-label="Pausar avance automático">
+                <i class="ph ph-pause" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="vistazo__side">
+              <ol class="hoja" role="list" aria-label="Tira de contacto"></ol>
+              <button class="btn btn--outline vistazo__galeria" type="button" id="vistazo-galeria">
+                <i class="ph ph-squares-four" aria-hidden="true"></i> Ver galería completa
+              </button>
+            </div>
+          </div>
+          <p class="visually-hidden" id="stage-live" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         NOSOTROS (oscuro, con grano y líneas topográficas)
+         ========================================================= -->
+    <section class="about tone-dark" id="nosotros" aria-labelledby="about-title">
+      <div class="topo topo--light topo--about" aria-hidden="true"></div>
+      <div class="container">
+        <header class="about__head">
+          <h2 class="h2 reveal-title" id="about-title">Tú llegas a vivirlo. Nosotros cuidamos el resto.</h2>
+          <p class="about__text" data-reveal>HILA nace para sacarte de la rutina con experiencias seguras y bien organizadas: transporte, equipo, guías y un grupo con quien compartirlo.</p>
+        </header>
+
+        <ol class="care" role="list">
+          <li class="care__item care__item--feature" data-reveal>
+            <span class="care__num" aria-hidden="true">01</span>
+            <i class="ph-light ph-certificate care__icon" aria-hidden="true"></i>
+            <h3>Guías certificados</h3>
+            <p>Te acompañan guías certificados y personal especializado en primeros auxilios. Conocen cada ruta y van a tu ritmo, sea tu primera salida o la décima.</p>
+          </li>
+          <li class="care__item" data-reveal>
+            <span class="care__num" aria-hidden="true">02</span>
+            <i class="ph-light ph-van care__icon" aria-hidden="true"></i>
+            <h3>Transporte incluido</h3>
+            <p>Salimos juntos desde la CDMX y regresamos juntos, así que no tienes que manejar ni buscar cómo llegar.</p>
+          </li>
+          <li class="care__item" data-reveal>
+            <span class="care__num" aria-hidden="true">03</span>
+            <i class="ph-light ph-backpack care__icon" aria-hidden="true"></i>
+            <h3>Equipo incluido</h3>
+            <p>Kayak, chaleco, casco, arnés o casa de campaña, según la experiencia.</p>
+          </li>
+          <li class="care__item" data-reveal>
+            <span class="care__num" aria-hidden="true">04</span>
+            <i class="ph-light ph-shield-check care__icon" aria-hidden="true"></i>
+            <h3>Seguro y clima</h3>
+            <p>Cada salida cuenta con seguro para la actividad. Si el clima no lo permite, eliges entre reagendar o un reembolso completo.</p>
+          </li>
+          <li class="care__item" data-reveal>
+            <span class="care__num" aria-hidden="true">05</span>
+            <i class="ph-light ph-users-three care__icon" aria-hidden="true"></i>
+            <h3>Grupos reducidos</h3>
+            <p>Máximo 12 personas por salida, para que todos se conozcan y nadie se quede atrás.</p>
+          </li>
+          <li class="care__item care__item--strip" data-reveal>
+            <i class="ph-light ph-handshake care__icon" aria-hidden="true"></i>
+            <div class="care__strip-text">
+              <h3>Cancelación clara</h3>
+              <p>Lees las condiciones completas antes de pagar, sin letras chiquitas.</p>
+            </div>
+            <a class="btn btn--light" href="legal/politicas-de-cancelacion/index.html" data-open-legal="cancelacion">Leer políticas de cancelación</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. CUESTIONARIO (claro). En celular se muestra un grupo
+         pequeño por pantalla; en computadora, el paso completo.
+         ========================================================= -->
+    <section class="booking" id="reserva" aria-labelledby="booking-title">
+      <div class="topo topo--booking" aria-hidden="true"></div>
+      <div class="container">
+        <header class="booking__head">
+          <h2 class="h2 reveal-title" id="booking-title" tabindex="-1">Antes de salir a vivirlo</h2>
+          <p class="section-lead" data-reveal>Queremos conocerte un poco mejor para cuidar tu experiencia y tu seguridad. Te tomará unos minutos.</p>
+        </header>
+
+        <div class="booking__layout">
+          <!-- Resumen: panel lateral en computadora, barra plegable en celular -->
+          <aside class="summary" id="summary" data-mood="" aria-label="Resumen de tu reserva">
+            <button class="summary__bar" type="button" aria-expanded="false" aria-controls="summary-detail">
+              <span class="summary__swatch" aria-hidden="true"></span>
+              <span class="summary__main">
+                <span class="summary__exp" id="sum-exp">Aún no eliges experiencia</span>
+                <span class="summary__meta" id="sum-meta">La eliges en el paso 2</span>
+              </span>
+              <strong class="summary__price" id="sum-total">$0</strong>
+              <i class="ph ph-caret-down summary__caret" aria-hidden="true"></i>
+            </button>
+            <div class="summary__detail" id="summary-detail">
+              <div class="summary__inner">
+                <dl class="summary__list">
+                  <div><dt>Fecha</dt><dd id="sum-fecha" class="is-empty">Por elegir</dd></div>
+                  <div><dt>A nombre de</dt><dd id="sum-nombre" class="is-empty">Por escribir</dd></div>
+                  <div><dt>Personas</dt><dd id="sum-personas">1 persona</dd></div>
+                  <div><dt>Contacto</dt><dd id="sum-contacto" class="is-empty">Por escribir</dd></div>
+                  <div class="summary__total"><dt>Total</dt><dd id="sum-total-2">$0 MXN</dd></div>
+                </dl>
+                <ul class="summary__checks" role="list">
+                  <li data-check="1"><i class="ph ph-circle" aria-hidden="true"></i><i class="ph ph-check-circle" aria-hidden="true"></i>Tus datos</li>
+                  <li data-check="2"><i class="ph ph-circle" aria-hidden="true"></i><i class="ph ph-check-circle" aria-hidden="true"></i>Experiencia y salud</li>
+                  <li data-check="3"><i class="ph ph-circle" aria-hidden="true"></i><i class="ph ph-check-circle" aria-hidden="true"></i>Emergencia y avisos</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <div class="form-card" data-reveal>
+            <div class="form-notice" id="form-notice" role="status" hidden>
+              <i class="ph ph-floppy-disk" aria-hidden="true"></i><span></span>
+            </div>
+
+            <div class="progress">
+              <p class="progress__label"><span id="progress-count">Paso 1 de 3</span><strong id="progress-name">Tus datos</strong></p>
+              <div class="progress__bar" role="progressbar" aria-label="Avance del cuestionario" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="progress__fill"></span></div>
+            </div>
+
+            <form id="booking-form" novalidate>
+              <div class="steps">
+                <!-- PASO 1: TUS DATOS -->
+                <fieldset class="step is-active" data-step="1" data-name="Tus datos">
+                  <legend class="visually-hidden">Paso 1 de 3: Tus datos</legend>
+                  <div class="screen is-active">
+                    <h3 class="screen__title">¿Cómo te llamas?</h3>
+                    <div class="field-grid">
+                      <div class="field"><label for="f-nombre">Nombre</label><div class="control"><input id="f-nombre" name="nombre" type="text" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" required><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__error" id="f-nombre-error"></p></div>
+                      <div class="field"><label for="f-apellido">Apellido</label><div class="control"><input id="f-apellido" name="apellido" type="text" autocomplete="family-name" autocapitalize="words" enterkeyhint="next" required><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__error" id="f-apellido-error"></p></div>
+                    </div>
+                  </div>
+                  <div class="screen">
+                    <h3 class="screen__title">Tu edad y tu celular</h3>
+                    <div class="field-grid">
+                      <div class="field"><label for="f-edad">Edad</label><div class="control"><input id="f-edad" name="edad" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" enterkeyhint="next" required aria-describedby="f-edad-hint"><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__hint" id="f-edad-hint">Por ahora recibimos personas de 18 a 34 años.</p><p class="field__error" id="f-edad-error"></p></div>
+                      <div class="field"><label for="f-celular">Celular</label><div class="control"><input id="f-celular" name="celular" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="55 1234 5678" enterkeyhint="next" required aria-describedby="f-celular-hint"><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__hint" id="f-celular-hint">10 dígitos. Te avisamos por aquí de cualquier cambio.</p><p class="field__error" id="f-celular-error"></p></div>
+                    </div>
+                  </div>
+                  <div class="screen">
+                    <h3 class="screen__title">¿A dónde te mandamos la confirmación?</h3>
+                    <div class="field-grid">
+                      <div class="field field--full"><label for="f-mail">Correo electrónico</label><div class="control"><input id="f-mail" name="mail" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="tu@correo.com" enterkeyhint="next" required><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__error" id="f-mail-error"></p></div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- PASO 2: EXPERIENCIA Y SALUD -->
+                <fieldset class="step" data-step="2" data-name="Experiencia y salud">
+                  <legend class="visually-hidden">Paso 2 de 3: Experiencia y salud</legend>
+                  <div class="screen">
+                    <h3 class="screen__title" id="exp-choice-label">¿Qué quieres vivir?</h3>
+                    <div class="choice" role="radiogroup" aria-labelledby="exp-choice-label" aria-describedby="f-experiencia-error">
+                      <label class="choice__item" data-mood="kayak"><input type="radio" name="experiencia" value="kayak" id="f-experiencia"><span class="choice__swatch" aria-hidden="true"></span><span class="choice__text"><strong>Kayak en Xochimilco</strong><small>Tranquilidad · desde $850</small></span><i class="ph ph-check-circle choice__check" aria-hidden="true"></i></label>
+                      <label class="choice__item" data-mood="ferrata"><input type="radio" name="experiencia" value="ferrata"><span class="choice__swatch" aria-hidden="true"></span><span class="choice__text"><strong>Vía ferrata + rappel</strong><small>Adrenalina · desde $1,450</small></span><i class="ph ph-check-circle choice__check" aria-hidden="true"></i></label>
+                      <label class="choice__item" data-mood="camping"><input type="radio" name="experiencia" value="camping"><span class="choice__swatch" aria-hidden="true"></span><span class="choice__text"><strong>Camping en Las Estacas</strong><small>Naturaleza · desde $1,890</small></span><i class="ph ph-check-circle choice__check" aria-hidden="true"></i></label>
+                    </div>
+                    <p class="field__error" id="f-experiencia-error"></p>
+                  </div>
+                  <div class="screen">
+                    <h3 class="screen__title">¿Qué fecha y cuántas personas?</h3>
+                    <div class="field-grid">
+                      <div class="field field--full">
+                        <label for="f-fecha">Fecha</label>
+                        <div class="control select"><select id="f-fecha" name="fecha" required aria-describedby="f-fecha-hint"><option value="">Primero elige una experiencia</option></select></div>
+                        <p class="field__hint" id="f-fecha-hint">¿Ninguna te queda? <a href="#contacto">Escríbenos</a> y te ayudamos.</p>
+                        <p class="field__error" id="f-fecha-error"></p>
+                      </div>
+                      <div class="field">
+                        <label for="f-personas">Personas</label>
+                        <div class="control select"><select id="f-personas" name="personas" required aria-describedby="f-personas-hint">
+                          <option value="1">1 persona</option>
+                          <option value="2">2 personas</option>
+                          <option value="3">3 personas</option>
+                          <option value="4">4 personas</option>
+                          <option value="5">5 personas</option>
+                          <option value="6">6 personas</option>
+                          <option value="7">7 personas</option>
+                          <option value="8">8 personas</option>
+                          <option value="9">9 personas</option>
+                          <option value="10">10 personas</option>
+                        </select></div>
+                        <p class="field__hint" id="f-personas-hint">El precio es por persona. Hasta 10 por reserva.</p>
+                        <p class="field__error" id="f-personas-error"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screen">
+                    <h3 class="screen__title">Tu salud</h3>
+                    <p class="why"><i class="ph ph-info" aria-hidden="true"></i><span><strong>Por qué lo pedimos:</strong> tu guía revisa esta información antes de salir para adaptar la actividad y saber cómo ayudarte. Es confidencial.</span></p>
+                    <div class="field-grid">
+                      <div class="field field--full"><label for="f-padecimientos">Padecimientos médicos</label><div class="control"><textarea id="f-padecimientos" name="padecimientos" rows="2" placeholder="Ej. asma, diabetes, hipertensión" required aria-describedby="f-padecimientos-hint"></textarea></div><p class="field__hint" id="f-padecimientos-hint">Incluye lesiones o cirugías recientes (una cirugía en los últimos 6 meses no sería apta). Si no tienes ninguno, escribe “Ninguno”.</p><p class="field__error" id="f-padecimientos-error"></p></div>
+                      <div class="field field--full"><label for="f-alergias">Alergias</label><div class="control"><input id="f-alergias" name="alergias" type="text" placeholder="Ej. penicilina, mariscos" enterkeyhint="next" required aria-describedby="f-alergias-hint"><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__hint" id="f-alergias-hint">Si no tienes ninguna, escribe “Ninguna”.</p><p class="field__error" id="f-alergias-error"></p></div>
+                    </div>
+                  </div>
+                  <div class="screen">
+                    <h3 class="screen__title">Para tu equipo</h3>
+                    <p class="why"><i class="ph ph-info" aria-hidden="true"></i><span><strong>Por qué lo pedimos:</strong> la altura y el peso nos ayudan a preparar el arnés, el chaleco o el kayak de tu talla. El tipo de sangre solo se usaría en una emergencia.</span></p>
+                    <div class="field-grid field-grid--3">
+                      <div class="field"><label for="f-altura">Altura</label><div class="control control--unit"><input id="f-altura" name="altura" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" placeholder="170" enterkeyhint="next" required><span aria-hidden="true">cm</span></div><p class="field__error" id="f-altura-error"></p></div>
+                      <div class="field"><label for="f-peso">Peso</label><div class="control control--unit"><input id="f-peso" name="peso" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" placeholder="65" enterkeyhint="next" required><span aria-hidden="true">kg</span></div><p class="field__error" id="f-peso-error"></p></div>
+                      <div class="field">
+                        <label for="f-sangre">Tipo de sangre</label>
+                        <div class="control select"><select id="f-sangre" name="sangre" required>
+                          <option value="">Elige</option>
+                          <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+                          <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+                          <option value="No lo sé">No lo sé</option>
+                        </select></div>
+                        <p class="field__error" id="f-sangre-error"></p>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- PASO 3: EMERGENCIA Y AVISOS -->
+                <fieldset class="step" data-step="3" data-name="Emergencia y avisos">
+                  <legend class="visually-hidden">Paso 3 de 3: Emergencia y avisos</legend>
+                  <div class="screen">
+                    <h3 class="screen__title">Tu contacto de emergencia</h3>
+                    <p class="why"><i class="ph ph-info" aria-hidden="true"></i><span><strong>Por qué lo pedimos:</strong> es la persona a quien llamaríamos si algo pasa durante la salida. Solo la contactamos en ese caso.</span></p>
+                    <div class="field-grid">
+                      <div class="field field--full"><label for="f-em-nombre">Nombre completo</label><div class="control"><input id="f-em-nombre" name="emNombre" type="text" autocomplete="off" autocapitalize="words" enterkeyhint="next" required><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__error" id="f-em-nombre-error"></p></div>
+                      <div class="field"><label for="f-em-parentesco">Parentesco</label><div class="control"><input id="f-em-parentesco" name="emParentesco" type="text" placeholder="Ej. mamá, hermano, amiga" enterkeyhint="next" required><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__error" id="f-em-parentesco-error"></p></div>
+                      <div class="field"><label for="f-em-telefono">Teléfono</label><div class="control"><input id="f-em-telefono" name="emTelefono" type="tel" inputmode="numeric" autocomplete="off" placeholder="55 1234 5678" enterkeyhint="next" required><i class="ph ph-check control__ok" aria-hidden="true"></i></div><p class="field__error" id="f-em-telefono-error"></p></div>
+                    </div>
+                  </div>
+                  <div class="screen">
+                    <h3 class="screen__title">Último paso: los avisos</h3>
+                    <div class="checks">
+                      <div class="check"><input id="f-privacidad" name="privacidad" type="checkbox" required><label for="f-privacidad">He leído el <a class="link" href="legal/aviso-de-privacidad/index.html" target="_blank" rel="noopener">Aviso de Privacidad<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></label><p class="field__error" id="f-privacidad-error"></p></div>
+                      <div class="check"><input id="f-cancelacion" name="cancelacion" type="checkbox" required><label for="f-cancelacion">Acepto las <a class="link" href="legal/politicas-de-cancelacion/index.html" target="_blank" rel="noopener">Políticas de Cancelación<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></label><p class="field__error" id="f-cancelacion-error"></p></div>
+                      <div class="check"><input id="f-terminos" name="terminos" type="checkbox" required><label for="f-terminos">Acepto los <a class="link" href="legal/terminos-y-condiciones/index.html" target="_blank" rel="noopener">Términos y Condiciones<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></label><p class="field__error" id="f-terminos-error"></p></div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <!-- Navegación: fija abajo en celular -->
+              <div class="form-nav">
+                <button class="btn btn--ghost form-nav__back" type="button" id="step-back"><i class="ph ph-arrow-left" aria-hidden="true"></i> Atrás</button>
+                <p class="form-nav__saved"><i class="ph ph-floppy-disk" aria-hidden="true"></i> Guardado en este navegador</p>
+                <button class="btn btn--primary form-nav__next" type="submit" id="step-next"><span id="step-next-label">Continuar</span> <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. PREGUNTAS FRECUENTES (claro)
+         ========================================================= -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <header class="faq__head">
+          <h2 class="h2 reveal-title" id="faq-title">Preguntas frecuentes</h2>
+          <p class="section-lead" data-reveal>Todo lo que necesitas saber antes de salir a vivirlo.</p>
+          <span class="script faq__sign" data-write aria-hidden="true">Sal a vivirlo.</span>
+        </header>
+        <div class="accordion" data-reveal>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">¿Qué pasa si es mi primera vez?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div class="acc-inner"><p>No te preocupes: muchas personas viven su primera experiencia con HILA. Antes de la actividad recibirás toda la información necesaria y durante la experiencia contarás con acompañamiento para que te sientas con confianza y disfrutes al máximo.</p></div></div></div>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">¿Qué pasa si voy solo?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div class="acc-inner"><p>¡También es para ti! Habrá un meet &amp; greet presencial para conocer al grupo, romper el hielo y conectar antes de la experiencia. Vas por la experiencia, te quedas por la gente.</p></div></div></div>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">¿Cuáles son los métodos de pago?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div class="acc-inner"><p>Aceptamos PayPal y efectivo. Si pagas en efectivo, se requiere un anticipo del 50% para apartar tu lugar y el resto se liquida antes de la experiencia. En compras por paquete obtienes 10% de descuento, y con PayPal puedes revisar las opciones de pago a plazos disponibles al momento del cobro.</p></div></div></div>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">¿Qué incluye?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div class="acc-inner"><p>En general, cada experiencia incluye transporte, la experiencia, merch, meet &amp; greet, fotos, equipo cuando aplique, guías certificados y personal especializado en primeros auxilios. Te recomendamos revisar cada experiencia para conocer sus detalles específicos.</p></div></div></div>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">¿Qué condición física necesito?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div class="acc-inner"><p>Depende de la actividad. Te recomendamos consultar la descripción de cada experiencia para revisar el nivel físico requerido antes de reservar.</p></div></div></div>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">¿Cuándo es cada experiencia?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-6" role="region" aria-labelledby="faq-6-btn"><div class="acc-inner"><p>Cada experiencia tiene fechas específicas. Revisa la información de cada experiencia para conocer disponibilidad, horario y punto de encuentro.</p></div></div></div>
+          <div class="acc-item"><h3><button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-btn">¿Qué pasa si el clima no permite realizar la actividad?<span class="acc-icon" aria-hidden="true"></span></button></h3><div class="acc-panel" id="faq-7" role="region" aria-labelledby="faq-7-btn"><div class="acc-inner"><p>Si el clima no permite que la actividad se lleve a cabo, podrás elegir entre reagendar en otra fecha o recibir un reembolso completo a tu método de pago original.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. CONTACTO (oscuro)
+         ========================================================= -->
+    <section class="contact tone-dark" id="contacto" aria-labelledby="contact-title">
+      <div class="topo topo--light topo--contact" aria-hidden="true"></div>
+      <div class="container contact__grid">
+        <header class="contact__head">
+          <h2 class="h1 reveal-title" id="contact-title">Contacto</h2>
+          <p class="section-lead" data-reveal>¿Tienes dudas o quieres saber más? Escríbenos y te ayudamos a encontrar tu próxima experiencia.</p>
+          <p class="contact__hours" data-reveal><i class="ph ph-clock" aria-hidden="true"></i> Lunes a viernes, de 9:00 a. m. a 6:00 p. m.</p>
+        </header>
+        <div class="contact__tiles">
+          <a class="contact-tile" href="mailto:hola@hilaexperiencias.com?subject=Quiero%20saber%20m%C3%A1s%20de%20HILA" data-reveal>
+            <i class="ph ph-envelope-simple contact-tile__icon" aria-hidden="true"></i>
+            <span class="contact-tile__label">Correo</span>
+            <span class="contact-tile__value">hola@hilaexperiencias.com</span>
+            <span class="contact-tile__action">Escribir correo <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+          <!-- REEMPLAZAR 525500000000 por el número real de WhatsApp Business -->
+          <a class="contact-tile" href="https://wa.me/525500000000?text=Hola%20HILA%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20experiencias." target="_blank" rel="noopener" data-reveal>
+            <i class="ph ph-whatsapp-logo contact-tile__icon" aria-hidden="true"></i>
+            <span class="contact-tile__label">WhatsApp Business</span>
+            <span class="contact-tile__value">+52 55 0000 0000</span>
+            <span class="contact-tile__action">Abrir chat <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+          <p class="contact__note" data-reveal>También te orientamos sobre experiencias, fechas y formas de pago.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. MERCH: carrusel manual de productos (claro)
+         Las tarjetas se crean desde el arreglo MERCH, al inicio de
+         script.js. Las fotos van en la carpeta v5/media/merch/
+         ========================================================= -->
+    <section class="merch" id="merch" aria-labelledby="merch-title">
+      <div class="container merch__head">
+        <h2 class="merch__title reveal-title" id="merch-title">El kit del explorador</h2>
+        <div class="merch__intro" data-reveal>
+          <p class="merch__text">Piezas hechas para acompañarte en cada salida y recordarte lo que viviste. Se incluyen en tu experiencia; pronto también podrás pedirlas por separado.</p>
+          <a class="btn btn--outline merch__cta" data-magnetico href="mailto:hola@hilaexperiencias.com?subject=Av%C3%ADsenme%20cuando%20est%C3%A9%20disponible%20el%20kit%20HILA">
+            <i class="ph ph-bell-simple" aria-hidden="true"></i> Avísame cuando esté disponible
+          </a>
+        </div>
+      </div>
+
+      <div class="shelf" data-reveal>
+        <div class="shelf__viewport" id="shelf" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Productos del kit HILA. Desliza o usa las flechas del teclado.">
+          <ul class="shelf__track" role="list"></ul>
+        </div>
+        <div class="container shelf__meta">
+          <div class="shelf__progress" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       10. PIE DE PÁGINA
+       ========================================================= -->
+  <footer class="footer tone-dark">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="marca marca--pie"><picture><source type="image/webp" srcset="img/logo-hila.webp 396w" sizes="180px"><img src="img/logo-hila.png" srcset="img/logo-hila.png 396w" sizes="180px" width="396" height="265" alt="HILA, Sal a vivirlo." decoding="async" loading="lazy"></picture></span>
+      </div>
+      <nav class="footer__links" aria-label="Pie de página">
+        <a href="#experiencias">Experiencias</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#comunidad">Comunidad</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <nav class="footer__links footer__exp" aria-label="Experiencias">
+        <a href="experiencias/kayak-en-xochimilco/index.html">Ver el kayak en Xochimilco</a>
+        <a href="experiencias/via-ferrata-y-rappel/index.html">Ver la vía ferrata y rappel</a>
+        <a href="experiencias/camping-en-las-estacas/index.html">Ver el camping en Las Estacas</a>
+      </nav>
+      <div class="footer__legal">
+        <a class="link" href="legal/aviso-de-privacidad/index.html">Aviso de Privacidad</a>
+        <a class="link" href="legal/politicas-de-cancelacion/index.html">Políticas de Cancelación</a>
+        <a class="link" href="legal/terminos-y-condiciones/index.html">Términos y Condiciones</a>
+      </div>
+      <p class="footer__copy">© <span id="year">2026</span> HILA Experiencias. Aventura real. Sube, conecta, repite.</p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       3. MODAL DE DETALLE (la tarjeta se expande hasta aquí)
+       ========================================================= -->
+  <dialog class="modal modal--exp" id="exp-modal" aria-labelledby="exp-title">
+    <div class="modal__panel" data-mood="kayak">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar detalle"><i class="ph ph-x" aria-hidden="true"></i></button>
+      <div class="modal__scroll">
+        <div class="exp-hero">
+          <!-- La ilustración (o foto) de la experiencia se genera aquí -->
+          <div class="exp-hero__scene" id="exp-scene"></div>
+          <div class="exp-hero__text">
+            <p class="exp-hero__mood" id="exp-mood"></p>
+            <h2 class="exp-hero__title" id="exp-title"></h2>
+          </div>
+        </div>
+        <div class="exp-body">
+          <dl class="exp-facts">
+            <div><dt><i class="ph ph-clock" aria-hidden="true"></i>Duración</dt><dd id="exp-duracion"></dd></div>
+            <div><dt><i class="ph ph-chart-bar" aria-hidden="true"></i>Dificultad</dt><dd id="exp-dificultad"></dd></div>
+            <div><dt><i class="ph ph-calendar-blank" aria-hidden="true"></i>Próxima fecha</dt><dd id="exp-fecha"></dd></div>
+          </dl>
+          <p class="exp-desc" id="exp-desc"></p>
+          <ul class="exp-includes" id="exp-incluye" role="list" aria-label="Qué incluye"></ul>
+          <h3 class="h3 exp-faq-title">Preguntas frecuentes</h3>
+          <div class="accordion accordion--compact" id="exp-faq"></div>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <p class="modal__price">Desde <strong id="exp-precio"></strong> <span>MXN por persona</span></p>
+        <button class="btn btn--primary" type="button" id="exp-reservar">Reservar <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- GALERÍA COMPLETA de "Un vistazo": mosaico a pantalla completa + visor -->
+  <dialog class="galeria" id="galeria" aria-labelledby="galeria-titulo">
+    <div class="galeria__barra">
+      <h2 class="galeria__titulo" id="galeria-titulo">Galería</h2>
+      <button class="galeria__cerrar" type="button" data-galeria-cerrar aria-label="Cerrar galería"><i class="ph ph-x" aria-hidden="true"></i></button>
+    </div>
+    <ul class="galeria__mosaico" role="list"></ul>
+    <div class="galeria__visor" role="group" aria-roledescription="visor" aria-label="Foto ampliada" hidden>
+      <button class="galeria__volver" type="button"><i class="ph ph-squares-four" aria-hidden="true"></i> Volver al mosaico</button>
+      <figure class="galeria__figura">
+        <div class="galeria__medio"></div>
+        <figcaption class="galeria__pie"><strong></strong><span></span></figcaption>
+      </figure>
+      <button class="galeria__nav galeria__nav--ant" type="button" aria-label="Anterior"><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+      <button class="galeria__nav galeria__nav--sig" type="button" aria-label="Siguiente"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </dialog>
+
+  <!-- MODAL: textos legales -->
+  <dialog class="modal modal--legal" id="legal-modal" aria-labelledby="legal-title">
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar"><i class="ph ph-x" aria-hidden="true"></i></button>
+      <div class="modal__scroll legal">
+        <h2 class="h3" id="legal-title"></h2>
+        <div id="legal-body"></div>
+      </div>
+      <div class="modal__footer modal__footer--end"><button class="btn btn--primary" type="button" data-close>Entendido</button></div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       6. PAGO SIMULADO: vista a pantalla completa con el ambiente
+       de la experiencia, boleto, carga, éxito (sello + confeti) y fallo
+       ========================================================= -->
+  <dialog class="pay" id="pay" aria-labelledby="pay-title" data-mood="kayak" data-view="redirect">
+    <div class="pay__bg" aria-hidden="true"></div>
+    <canvas class="pay__confetti" aria-hidden="true"></canvas>
+    <!-- V9: ruta topográfica que se dibuja y converge en el boleto (decorativa) -->
+    <svg class="pay__ruta" aria-hidden="true" focusable="false"><path d="M0 0"/></svg>
+
+    <div class="pay__layout">
+      <header class="pay__top">
+        <span class="marca marca--pago"><picture><source type="image/webp" srcset="img/logo-hila.webp 396w" sizes="120px"><img src="img/logo-hila.png" srcset="img/logo-hila.png 396w" sizes="120px" width="396" height="265" alt="HILA, Sal a vivirlo." decoding="async"></picture></span>
+        <p class="pay__demo"><i class="ph ph-flask" aria-hidden="true"></i> Modo demo: sin cobros reales</p>
+      </header>
+
+      <div class="pay__stage">
+        <section class="pay__status" aria-live="polite">
+          <!-- Cargando -->
+          <div class="pay__view is-active" data-view="redirect">
+            <svg class="route" viewBox="0 0 260 90" aria-hidden="true">
+              <path class="route__topo" d="M10 70 C50 40 80 78 120 52 S190 20 250 44"/>
+              <path class="route__topo" d="M10 82 C55 56 86 88 126 66 S196 36 250 58"/>
+              <path class="route__path" d="M18 66 C58 30 92 72 130 46 S198 18 242 30"/>
+              <circle class="route__start" cx="18" cy="66" r="5"/>
+              <circle class="route__end" cx="242" cy="30" r="6"/>
+            </svg>
+            <h2 class="pay__title" id="pay-title">Estamos conectando con PayPal</h2>
+            <p class="pay__text">Tus respuestas quedan guardadas mientras tanto.</p>
+          </div>
+
+          <!-- PayPal simulado -->
+          <div class="pay__view" data-view="paypal">
+            <p class="pay__provider"><i class="ph ph-lock-simple" aria-hidden="true"></i> PayPal (simulado)</p>
+            <h2 class="pay__title" tabindex="-1">Revisa tu boleto y confirma</h2>
+            <p class="pay__text">Esto es una demostración: elige abajo qué resultado quieres probar. No se hace ningún cargo.</p>
+          </div>
+
+          <!-- 6A: éxito -->
+          <div class="pay__view" data-view="ok">
+            <svg class="check-draw" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="M20 33.5l8 8 16-17"/></svg>
+            <!-- Sin control de capacidad: el negocio confirma cada reserva manualmente -->
+            <h2 class="pay__title" tabindex="-1">¡Listo! Recibimos tu reserva</h2>
+            <p class="pay__text" id="ok-text"></p>
+            <ol class="pay__next" role="list">
+              <li><i class="ph ph-envelope-simple" aria-hidden="true"></i><span>Revisa tu correo: ahí está tu confirmación.</span></li>
+              <li><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span>En menos de 24 horas te confirmamos tu lugar por WhatsApp, con el punto de encuentro y qué llevar.</span></li>
+              <li><i class="ph ph-users-three" aria-hidden="true"></i><span>Te sumamos al grupo de tu salida para conocer a los demás.</span></li>
+            </ol>
+          </div>
+
+          <!-- 6B: fallo -->
+          <div class="pay__view" data-view="fail">
+            <div class="fail-mark" aria-hidden="true"><i class="ph ph-cloud"></i></div>
+            <h2 class="pay__title" tabindex="-1">Tu pago no se completó</h2>
+            <p class="pay__text">PayPal no pudo procesar el cobro (en esta demo simulamos una tarjeta rechazada). <strong>No se hizo ningún cargo</strong> y tus respuestas siguen guardadas.</p>
+            <ul class="fail-tips" role="list">
+              <li>Revisa que tu tarjeta tenga saldo y esté habilitada para compras en línea.</li>
+              <li>Prueba con otro método de pago dentro de PayPal.</li>
+              <li>Si se repite, <a href="#contacto" data-pay="contact">escríbenos</a> y te ayudamos a reservar.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Boleto -->
+        <article class="ticket" aria-label="Boleto de tu experiencia">
+          <div class="ticket__main">
+            <p class="ticket__brand">HILA · Boleto de experiencia</p>
+            <p class="ticket__mood" id="t-mood"></p>
+            <h3 class="ticket__name" id="t-name"></h3>
+            <dl class="ticket__rows">
+              <div><dt>Fecha</dt><dd id="t-fecha"></dd></div>
+              <div><dt>Persona</dt><dd id="t-persona"></dd></div>
+              <div><dt>Salida</dt><dd>CDMX</dd></div>
+              <div class="ticket__total"><dt>Total</dt><dd id="t-total"></dd></div>
+            </dl>
+          </div>
+          <div class="ticket__stub">
+            <span>Folio</span>
+            <strong id="t-folio">Pendiente</strong>
+            <span class="ticket__corte" aria-hidden="true"></span>
+          </div>
+          <div class="ticket__stamp" aria-hidden="true"><span>Pagado</span><small id="t-stamp"></small></div>
+          <span class="ticket__onda" aria-hidden="true"></span>
+          <span class="ticket__brillo" aria-hidden="true"></span>
+        </article>
+      </div>
+
+      <!-- Acciones: siempre visibles abajo -->
+      <footer class="pay__actions">
+        <div class="pay__group" data-for="redirect">
+          <button class="btn btn--quiet" type="button" data-pay="back"><i class="ph ph-arrow-left" aria-hidden="true"></i> Volver al cuestionario</button>
+        </div>
+        <div class="pay__group" data-for="paypal">
+          <button class="btn btn--quiet" type="button" data-pay="back"><i class="ph ph-arrow-left" aria-hidden="true"></i> Volver</button>
+          <button class="btn btn--light-outline" type="button" data-pay="fail">Simular pago fallido</button>
+          <button class="btn btn--primary" type="button" data-pay="ok"><i class="ph ph-check" aria-hidden="true"></i> Simular pago exitoso</button>
+        </div>
+        <div class="pay__group" data-for="ok">
+          <button class="btn btn--quiet" type="button" data-pay="done">Volver al inicio</button>
+          <button class="btn btn--light-outline" type="button" data-pay="pdf"><i class="ph ph-file-pdf" aria-hidden="true"></i> Guardar PDF</button>
+          <button class="btn btn--light-outline" type="button" data-pay="calendar"><i class="ph ph-calendar-plus" aria-hidden="true"></i> Añadir al calendario</button>
+          <a class="btn btn--primary" id="ok-whatsapp" href="#" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Escribir por WhatsApp</a>
+        </div>
+        <div class="pay__group" data-for="fail">
+          <button class="btn btn--light-outline" type="button" data-pay="back">Volver al cuestionario</button>
+          <button class="btn btn--primary" type="button" data-pay="retry"><i class="ph ph-arrow-clockwise" aria-hidden="true"></i> Intentar de nuevo</button>
+        </div>
+      </footer>
+    </div>
+  </dialog>
+
+
+  <!-- =========================================================
+       COMPROBANTE DE RESERVA (plantilla: script.js la inserta al imprimir / Guardar como PDF)
+       FASE 2: folio e ID de transacción vendrán del servidor y de PayPal.
+       ========================================================= -->
+  <template id="plantilla-comprobante">
+  <section class="comprobante" id="comprobante" aria-hidden="true">
+    <header class="cp__head">
+      <span class="marca cp__marca"><img src="img/logo-hila.png" width="396" height="265" alt="HILA, Sal a vivirlo."></span>
+      <div class="cp__doc">
+        <p class="cp__tipo">Comprobante de reserva</p>
+        <p class="cp__folio">Folio <strong id="cp-folio">HILA-0000</strong> <span>(DEMO)</span></p>
+        <p class="cp__emision">Emitido el <span id="cp-emision"></span></p>
+      </div>
+    </header>
+    <p class="cp__aviso">Comprobante de reserva, no es factura fiscal.</p>
+    <dl class="cp__datos">
+      <div><dt>Cliente</dt><dd id="cp-cliente"></dd></div>
+      <div><dt>Experiencia</dt><dd id="cp-experiencia"></dd></div>
+      <div><dt>Fecha y hora</dt><dd id="cp-fecha"></dd></div>
+      <div><dt>Punto de encuentro</dt><dd id="cp-punto"></dd></div>
+      <div><dt>Personas</dt><dd id="cp-personas"></dd></div>
+      <div><dt>Importe pagado</dt><dd id="cp-importe"></dd></div>
+      <div class="cp__ancho"><dt>ID de transacción PayPal</dt><dd><span id="cp-transaccion"></span> (DEMO)</dd></div>
+    </dl>
+    <div class="cp__bloques">
+      <div class="cp__bloque">
+        <p class="cp__subtitulo">Qué llevar</p>
+        <ul id="cp-llevar"></ul>
+      </div>
+      <div class="cp__bloque">
+        <p class="cp__subtitulo">Contacto de HILA en caso de emergencia</p>
+        <p>WhatsApp: +52 55 0000 0000</p>
+        <p>Correo: hola@hilaexperiencias.com</p>
+        <p>Lunes a viernes, de 9:00 a. m. a 6:00 p. m.</p>
+      </div>
+    </div>
+    <div class="cp__pie">
+      <p>HILA Experiencias · Sal a vivirlo.</p>
+      <p>Documento de demostración: el folio y la transacción reales los generará el servidor.</p>
+    </div>
+  </section>
+  </template>
+
+  <script src="escenas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
