@@ -1,0 +1,11 @@
+Logotipo oficial (ya incluido):
+- logo-hila.png          ARCHIVO MAESTRO. Copia idéntica de referencias/logo-hila.png (396 x 265 px).
+                         No lo edites, recortes, recolorees ni reemplaces por una versión redibujada.
+- logo-hila.webp         La misma imagen en WebP, mismo tamaño y aspecto (carga más rápido).
+- logo-hila-sin-fondo.png  Intento automático de quitar el fondo. NO SE USA (solo referencia).
+- logo-hila-trazado.svg    Intento automático de vectorizar. NO SE USA (solo referencia).
+
+Imágenes que faltan en esta carpeta (marcadores referenciados por el sitio):
+- og-hila-1200x630.jpg   Imagen para redes sociales (Open Graph / Twitter), 1200 x 630 px.
+- apple-touch-icon.png   Ícono para iPhone/iPad, 180 x 180 px, fondo sólido (recorte del símbolo del logo maestro).
+El favicon provisional está en ../favicon.svg; reemplázalo por el definitivo (ver LEEME.md, sección Logotipo).

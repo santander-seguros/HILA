@@ -1,0 +1,121 @@
+{
+  "_instrucciones": [
+    "CÓMO CAMBIAR FECHAS, HORAS, PUNTOS DE ENCUENTRO Y PRECIOS (sin tocar el diseño):",
+    "1. Cada bloque de \"salidas\" es una fecha. Edita \"fecha\" (AAAA-MM-DD), \"hora\" (HH:MM, 24 h), \"punto_de_encuentro\" y \"precio\" (en pesos, sin comas).",
+    "2. Para agregar una fecha, copia un bloque completo, cámbiale el \"id\" (que no se repita) y sus datos. Para quitarla, borra el bloque o pon \"estado\": \"desactivada\".",
+    "3. \"experiencia_id\" debe ser kayak, ferrata o camping.",
+    "4. \"estado\" solo puede ser \"publicada\" (se muestra y se puede reservar) o \"desactivada\" (no se muestra).",
+    "5. IMPORTANTE: después de editar este archivo, copia el mismo contenido en data/salidas.js (entre \"window.HILA_SALIDAS = \" y el \";\" final). Ese archivo se usa al abrir la página con doble clic.",
+    "En esta versión NO hay control de capacidad: cualquier persona puede reservar cualquier fecha publicada y el negocio confirma cada reserva manualmente.",
+    "Las fechas y precios de abajo son de ejemplo (DEMO)."
+  ],
+  "experiencias": [
+    {
+      "id": "kayak",
+      "slug": "kayak-en-xochimilco",
+      "nombre": "Kayak en Xochimilco",
+      "precio_desde": 850,
+      "duracion": "5 horas",
+      "dificultad": "Baja"
+    },
+    {
+      "id": "ferrata",
+      "slug": "via-ferrata-y-rappel",
+      "nombre": "Vía ferrata + rappel",
+      "precio_desde": 1450,
+      "duracion": "8 horas",
+      "dificultad": "Media"
+    },
+    {
+      "id": "camping",
+      "slug": "camping-en-las-estacas",
+      "nombre": "Camping en Las Estacas",
+      "precio_desde": 1890,
+      "duracion": "2 días, 1 noche",
+      "dificultad": "Baja"
+    }
+  ],
+  "salidas": [
+    {
+      "id": "DEMO-1001",
+      "experiencia_id": "kayak",
+      "fecha": "2026-10-17",
+      "hora": "05:30",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 850
+    },
+    {
+      "id": "DEMO-1002",
+      "experiencia_id": "kayak",
+      "fecha": "2026-10-31",
+      "hora": "05:30",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 850
+    },
+    {
+      "id": "DEMO-1003",
+      "experiencia_id": "kayak",
+      "fecha": "2026-11-14",
+      "hora": "05:30",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 850
+    },
+    {
+      "id": "DEMO-1004",
+      "experiencia_id": "kayak",
+      "fecha": "2026-11-28",
+      "hora": "05:30",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "desactivada",
+      "precio": 850
+    },
+    {
+      "id": "DEMO-2001",
+      "experiencia_id": "ferrata",
+      "fecha": "2026-10-25",
+      "hora": "06:00",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 1450
+    },
+    {
+      "id": "DEMO-2002",
+      "experiencia_id": "ferrata",
+      "fecha": "2026-11-22",
+      "hora": "06:00",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 1450
+    },
+    {
+      "id": "DEMO-2003",
+      "experiencia_id": "ferrata",
+      "fecha": "2026-12-13",
+      "hora": "06:00",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 1450
+    },
+    {
+      "id": "DEMO-3001",
+      "experiencia_id": "camping",
+      "fecha": "2026-11-07",
+      "hora": "08:00",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 1890
+    },
+    {
+      "id": "DEMO-3002",
+      "experiencia_id": "camping",
+      "fecha": "2026-12-05",
+      "hora": "08:00",
+      "punto_de_encuentro": "Punto de encuentro DEMO en CDMX (por confirmar)",
+      "estado": "publicada",
+      "precio": 1890
+    }
+  ]
+}
